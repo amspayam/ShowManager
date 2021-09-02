@@ -6,7 +6,7 @@ import com.combyne.showmanager.addmovie.data.network.AddMovieRemoteDataSourceImp
 import com.combyne.showmanager.addmovie.domain.AddMovieRepository
 import org.koin.dsl.module
 
-val addShowDataModule = module {
+val addMovieDataModule = module {
 
     factory<AddMovieRepository> { AddMovieRepositoryImpl(get()) }
     factory<AddMovieRemoteDataSource> { AddMovieRemoteDataSourceImpl(get()) }

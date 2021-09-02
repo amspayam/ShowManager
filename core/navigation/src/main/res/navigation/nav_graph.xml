@@ -20,9 +20,9 @@
 
     <fragment
         android:id="@+id/addShowFragment"
-        android:name="com.combyne.showmanager.addmovie.presenter.AddShowFragment"
+        android:name="com.combyne.showmanager.addmovie.presenter.AddMovieFragment"
         android:label="@string/add_show_fragment_label"
-        tools:layout="@layout/fragment_add_show">
+        tools:layout="@layout/fragment_add_movie">
     </fragment>
 
     <fragment

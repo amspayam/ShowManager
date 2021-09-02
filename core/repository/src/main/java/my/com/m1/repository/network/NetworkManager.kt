@@ -71,22 +71,6 @@ class NetworkManager(
             .build()
     }
 
-    private fun getDeviceId(): String {
-        var deviceId: String =
-            cacheManager.get(CacheManager.DEVICE_ID, "") ?: ""
-        return if (deviceId.isNotEmpty()) {
-            deviceId
-        } else {
-            deviceId = UUID.randomUUID().toString()
-            cacheManager.put(CacheManager.DEVICE_ID, deviceId)
-            deviceId
-        }
-    }
-
-    private fun isDeviceSign(): Boolean {
-        return cacheManager.get(CacheManager.DEVICE_SIGN_STATE, false)
-    }
-
     private fun OkHttpClient.Builder.headerInterceptor(networkCallback: NetworkCallbackX): OkHttpClient.Builder {
         return this.addInterceptor { chain ->
             val res: okhttp3.Response
@@ -131,13 +115,10 @@ class NetworkManager(
 
 
     private fun OkHttpClient.Builder.okLogInterceptor(): OkHttpClient.Builder {
-        val okLogInterceptor = OkLogInterceptor.builder().build();
+        val okLogInterceptor = OkLogInterceptor.builder().build()
         return this.addInterceptor(okLogInterceptor)
     }
 
-    companion object {
-        private const val AB_CHANNEL_HEADER = "MOBILE-APP,AndroidDevice"
-    }
 }
 
 interface NetworkCallbackX {

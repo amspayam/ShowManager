@@ -52,7 +52,7 @@ class CalendarUtil {
             } ?: kotlin.run { "none" }
         }
 
-        const val DATE_FORMAT_YEAR_MONTH_DAY = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+        const val DATE_FORMAT_YEAR_MONTH_DAY = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
         const val DATE_FORMAT_MONTH_NAME_DAY_YEAR = "MMM dd, yyyy"
     }
 }

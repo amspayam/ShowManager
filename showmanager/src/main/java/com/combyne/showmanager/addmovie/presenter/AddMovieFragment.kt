@@ -4,27 +4,28 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.combyne.core.view.onViewData
-import com.combyne.core.view.onViewError
-import com.combyne.core.view.onViewLoading
+import androidx.navigation.fragment.findNavController
 import com.combyne.showmanager.R
-import com.combyne.showmanager.databinding.FragmentAddShowBinding
+import com.combyne.showmanager.databinding.FragmentAddMovieBinding
 import com.combyne.uikit.base.BaseFragment
 import com.combyne.uikit.base.viewmodel.MessageMaster
 import com.combyne.uikit.base.viewmodel.MessageTypeEnum
+import com.mobilityone.core.view.onViewData
+import com.mobilityone.core.view.onViewError
+import com.mobilityone.core.view.onViewLoading
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class AddMovieFragment : BaseFragment<AddMovieViewModel>() {
 
     override val viewModel: AddMovieViewModel by viewModel()
-    private lateinit var binding: FragmentAddShowBinding
+    private lateinit var binding: FragmentAddMovieBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentAddShowBinding.inflate(inflater, container, false)
+        binding = FragmentAddMovieBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -35,13 +36,23 @@ class AddMovieFragment : BaseFragment<AddMovieViewModel>() {
     override fun setupObserveData() {
         viewModel.addShowViewStateLiveData.observe(viewLifecycleOwner) { response ->
             response.onViewLoading { binding.saveButton.startLoading() }
-                .onViewData { }
-                .onViewError { messages, status ->
+                .onViewData {
+                    binding.saveButton.stopLoading()
+                    showMessage(
+                        MessageMaster(
+                            type = MessageTypeEnum.TOAST,
+                            message = "Movie ${it?.title()} added successfully"
+                        )
+                    ).also {
+                        findNavController().popBackStack()
+                    }
+                }
+                .onViewError { messages, _ ->
                     binding.saveButton.stopLoading()
                     showMessage(
                         MessageMaster(
                             type = MessageTypeEnum.SNACK_BAR,
-                            message = "$status $messages"
+                            message = messages
                         )
                     )
                 }

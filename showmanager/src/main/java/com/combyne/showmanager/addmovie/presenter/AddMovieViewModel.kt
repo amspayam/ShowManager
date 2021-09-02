@@ -1,20 +1,21 @@
 package com.combyne.showmanager.addmovie.presenter
 
 import androidx.lifecycle.MutableLiveData
-import com.combyne.core.view.ViewState
-import com.combyne.showmanager.MoviesQuery
+import com.combyne.showmanager.CreateMovieMutation
 import com.combyne.showmanager.R
 import com.combyne.showmanager.addmovie.domain.AddMovieUseCase
 import com.combyne.showmanager.addmovie.domain.model.AddMovieRequestModel
 import com.combyne.uikit.base.viewmodel.BaseViewModel
 import com.combyne.uikit.base.viewmodel.MessageMaster
 import com.combyne.uikit.base.viewmodel.MessageTypeEnum
+import com.mobilityone.core.view.ViewState
+import my.com.m1.repository.executeUseCase
 
 class AddMovieViewModel(
     var addShowUseCase: AddMovieUseCase
 ) : BaseViewModel() {
 
-    val addShowViewStateLiveData = MutableLiveData<ViewState<List<MoviesQuery.Movie>?>>()
+    val addShowViewStateLiveData = MutableLiveData<ViewState<CreateMovieMutation.Movie?>>()
 
     fun addNewShow(title: String?, releaseDate: String?, seasons: String?) {
         val isValid = checkAddShowDataValidity(
@@ -33,12 +34,11 @@ class AddMovieViewModel(
                     releaseDate = releaseDate!!,
                     seasons = seasons!!.toDouble()
                 )
-            )
-//                .executeUseCase({
-//                    addShowViewStateLiveData.value = ViewState.ViewData(it)
-//                }, {
-//                    addShowViewStateLiveData.value = ViewState.ViewError(it.message, it.status)
-//                })
+            ).executeUseCase({
+                addShowViewStateLiveData.value = ViewState.ViewData(it)
+            }, {
+                addShowViewStateLiveData.value = ViewState.ViewError(it.error, it.status)
+            })
         }
     }
 

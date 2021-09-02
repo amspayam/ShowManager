@@ -1,4 +1,4 @@
-package com.combyne.core.view
+package com.mobilityone.core.view
 
 sealed class ViewState<out T> {
     class ViewError(var message: String = "", var status: Int = 0) : ViewState<Nothing>()
