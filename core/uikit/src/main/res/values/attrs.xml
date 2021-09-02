@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="AppThemeAttr">
+        <!--        <attr name="colorPrimaryVariant" format="color" />-->
+        <!--        <attr name="colorPrimary" format="color" />-->
+        <!--        <attr name="colorSecondary" format="color" />-->
+        <!--        <attr name="colorSecondaryVariant" format="color" />-->
+        <!--        <attr name="colorSurface" format="color" />-->
+        <!--        <attr name="colorSecondarySurface" format="color" />-->
+        <!--        <attr name="colorBackground" format="color" />-->
+        <!--        <attr name="colorError" format="color" />-->
+        <!--        <attr name="colorOnPrimary" format="color" />-->
+        <!--        <attr name="colorOnSecondary" format="color" />-->
+        <!--        <attr name="colorOnSurface" format="color" />-->
+        <!--        <attr name="colorOnError" format="color" />-->
+        <!--        <attr name="colorDivider" format="color" />-->
+        <!--        <attr name="colorOnPrimaryButton" format="color" />-->
+        <!--        <attr name="colorIconTintOnPrimary" format="color" />-->
+        <!--        <attr name="colorIconTintPrimaryButton" format="color" />-->
+        <!--        <attr name="colorIconTintSecondaryButton" format="color" />-->
+        <!--        <attr name="colorOnPrimaryButtonDisableState" format="color" />-->
+        <!--        <attr name="colorIconTintBottomAppBarSelectedState" format="color" />-->
+        <!--        <attr name="colorIconTintBottomAppBarUnSelectedState" format="color" />-->
+        <!--        <attr name="colorPrimaryButtonDefaultState" format="color" />-->
+        <!--        <attr name="colorPrimaryButtonDisableState" format="color" />-->
+        <!--        <attr name="colorPrimaryButtonSelectedState" format="color" />-->
+        <!--        <attr name="colorSecondaryButtonDefaultState" format="color" />-->
+        <!--        <attr name="colorSecondaryButtonDisableState" format="color" />-->
+        <!--        <attr name="colorSecondaryButtonSelectedState" format="color" />-->
+        <!--        <attr name="colorGhostButtonDefaultState" format="color" />-->
+        <!--        <attr name="colorGhostButtonDisableState" format="color" />-->
+        <!--        <attr name="colorGhostButtonSelectedState" format="color" />-->
+        <!--        <attr name="colorPrimaryText" format="color" />-->
+        <!--        <attr name="colorSecondaryText" format="color" />-->
+        <!--        <attr name="colorTextInputLayout" format="color" />-->
+        <!--        <attr name="colorCursor" format="color" />-->
+        <!--        <attr name="colorPrimaryButtonRipple" format="color" />-->
+        <!--        <attr name="colorOnPrimaryRipple" format="color" />-->
+        <!--        <attr name="colorOnSecondaryRipple" format="color" />-->
+        <!--        <attr name="colorBoxStrokeTextInputLayoutDefaultState" format="color" />-->
+        <!--        <attr name="colorTextInputLayoutFocusedState" format="color" />-->
+        <!--        <attr name="colorTextInputLayoutDefaultState" format="color" />-->
+        <!--        <attr name="colorTextInputLayoutDisableState" format="color" />-->
+        <!--        <attr name="colorIconTintInputLayoutDisableState" format="color" />-->
+        <!--        <attr name="colorIconTintInputLayoutEnableState" format="color"/>-->
+        <!--        <attr name="colorEditTextDisableState" format="color" />-->
+        <!--        <attr name="colorTagButtonDisableState" format="color" />-->
+        <!--        <attr name="colorTagButtonSelectedState" format="color" />-->
+        <!--        <attr name="colorBoxStrokeTagButtonDisableState" format="color" />-->
+        <!--        <attr name="colorBoxStrokeTagButtonSelectedState" format="color" />-->
+        <!--        <attr name="colorTextGhostButtonDisableState" format="color" />-->
+        <!--        <attr name="colorBackgroundGhostButtonDisableState" format="color" />-->
+        <!--        <attr name="colorStrokePrimaryButton" format="color" />-->
+        <!--        <attr name="colorStrokeSecondaryButton" format="color" />-->
+        <!--        <attr name="colorIconTintSecondary" format="color" />-->
+        <!--        <attr name="colorHelperText" format="color" />-->
+
+        <!-- =================================================================================== -->
+    </declare-styleable>
+    <!--    <declare-styleable name="ExpandableCardView">-->
+    <!--        <attr name="primaryTitle" format="string" />-->
+    <!--        <attr name="secondaryTitle" format="string" />-->
+    <!--        <attr name="containerView" format="reference" />-->
+    <!--        <attr name="expandOnLayoutClick" format="boolean" />-->
+    <!--        <attr name="animationDuration" format="integer" />-->
+    <!--        <attr name="startExpanded" format="boolean" />-->
+    <!--        <attr name="defaultMode">-->
+    <!--            <enum name="collapse" value="0" />-->
+    <!--            <enum name="expand" value="1" />-->
+    <!--        </attr>-->
+    <!--    </declare-styleable>-->
+
+    <!--    <declare-styleable name="StateLayout">-->
+    <!--        <attr name="sl_state" format="enum">-->
+    <!--            <enum name="empty" value="0" />-->
+    <!--            <enum name="none" value="1" />-->
+    <!--        </attr>-->
+    <!--        <attr name="sl_emptyLayout" format="reference" />-->
+    <!--    </declare-styleable>-->
+
+    <!--    <declare-styleable name="AppCellphoneInput">-->
+    <!--        <attr name="cellphone" format="string" />-->
+    <!--        <attr name="errorMessage" format="string" />-->
+    <!--    </declare-styleable>-->
+
+    <!--    <declare-styleable name="OtpTextInput"/>-->
+    <!--    <declare-styleable name="AppPasswordInput">-->
+    <!--        <attr name="helperText" format="string"/>-->
+    <!--    </declare-styleable>-->
+
+    <declare-styleable name="AppDropDown">
+        <attr name="dropDownErrorMessage" format="string" />
+        <attr name="dropDownHint" format="string" />
+    </declare-styleable>
+
+</resources>

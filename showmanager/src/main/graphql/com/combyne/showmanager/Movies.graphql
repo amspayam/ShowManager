@@ -1,0 +1,14 @@
+query Movies($first: Int, $skip: Int) {
+    response: movies(first: $first, skip: $skip) {
+        movies: edges {
+            movie: node {
+                id
+                title
+                releaseDate
+                seasons
+            }
+            cursor
+        }
+        count
+    }
+}

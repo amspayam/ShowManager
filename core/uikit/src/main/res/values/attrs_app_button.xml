@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="AppButton">
+        <attr name="progressMode">
+            <enum name="fill" value="0" />
+            <enum name="animate" value="1" />
+        </attr>
+        <attr name="fillingDirection">
+            <enum name="rightToLeft" value="0" />
+            <enum name="leftToRight" value="1" />
+        </attr>
+        <attr name="fillingColor" format="color|reference" />
+        <attr name="fillingDuration" format="integer|reference" />
+        <attr name="initialPassedDuration" format="integer|reference" />
+        <attr name="fillingAlpha" format="integer|reference" />
+    </declare-styleable>
+
+</resources>

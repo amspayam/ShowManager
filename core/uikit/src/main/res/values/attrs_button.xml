@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="filledButton" format="reference" />
+    <attr name="outlineButton" format="reference" />
+    <attr name="textButton" format="reference" />
+    <declare-styleable name="ButtonComponent">
+        <attr name="android:text" />
+        <attr name="buttonType">
+            <flag name="fill" value="0" />
+            <flag name="outline" value="1" />
+            <flag name="text" value="2" />
+        </attr>
+    </declare-styleable>
+
+</resources>

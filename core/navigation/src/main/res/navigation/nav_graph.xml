@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/showsFragment">
+
+    <fragment
+        android:id="@+id/showsFragment"
+        android:name="com.combyne.showmanager.shows.presenter.ShowsFragment"
+        android:label="@string/shows_fragment_label"
+        tools:layout="@layout/fragment_shows">
+        <action
+            android:id="@+id/action_showsFragment_to_addShowFragment"
+            app:destination="@id/addShowFragment" />
+        <action
+            android:id="@+id/action_showsFragment_to_moviesFragment"
+            app:destination="@id/moviesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addShowFragment"
+        android:name="com.combyne.showmanager.addmovie.presenter.AddShowFragment"
+        android:label="@string/add_show_fragment_label"
+        tools:layout="@layout/fragment_add_show">
+    </fragment>
+
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="com.combyne.showmanager.movies.presenter.MoviesFragment"
+        android:label="@string/movies_fragment_label"
+        tools:layout="@layout/fragment_movies">
+    </fragment>
+
+</navigation>

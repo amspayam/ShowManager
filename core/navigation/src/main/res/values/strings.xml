@@ -1,0 +1,5 @@
+<resources>
+    <string name="shows_fragment_label">Shows Fragment</string>
+    <string name="add_show_fragment_label">Add Show Fragment</string>
+    <string name="movies_fragment_label">Movies Fragment</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EditTextComponent">
+        <attr name="android:text" />
+        <attr name="android:hint" />
+        <attr name="android:enabled" />
+        <attr name="android:imeOptions" />
+        <attr name="android:inputType" />
+        <attr name="android:lines" />
+        <attr name="android:drawableStart" />
+        <attr name="textType" format="flags">
+            <flag name="date" value="0" />
+            <flag name="password" value="1" />
+            <flag name="currency" value="2" />
+            <flag name="search" value="3" />
+            <flag name="phone" value="4" />
+            <flag name="copy" value="5" />
+            <flag name="gold" value="6" />
+        </attr>
+    </declare-styleable>
+</resources>

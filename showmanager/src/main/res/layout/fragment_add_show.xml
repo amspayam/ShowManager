@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.combyne.uikit.components.edittext.EditTextComponent
+        android:id="@+id/tvShowEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/tv_show"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <com.combyne.uikit.components.edittext.EditTextComponent
+        android:id="@+id/releaseDateEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="@string/release_date"
+        app:layout_constraintEnd_toEndOf="@+id/tvShowEditText"
+        app:layout_constraintStart_toStartOf="@+id/tvShowEditText"
+        app:layout_constraintTop_toBottomOf="@+id/tvShowEditText"
+        app:textType="date" />
+
+    <com.combyne.uikit.components.edittext.EditTextComponent
+        android:id="@+id/seasonsEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="@string/seasons"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/tvShowEditText"
+        app:layout_constraintStart_toStartOf="@+id/tvShowEditText"
+        app:layout_constraintTop_toBottomOf="@+id/releaseDateEditText" />
+
+    <com.combyne.uikit.components.button.ButtonComponent
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/save_tv_show"
+        app:layout_constraintEnd_toEndOf="@+id/seasonsEditText"
+        app:layout_constraintStart_toStartOf="@+id/seasonsEditText"
+        app:layout_constraintTop_toBottomOf="@+id/seasonsEditText" />
+
+    <com.combyne.uikit.components.toolbar.ToolbarComponent
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_new_tv_show"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:toolbarType="back" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

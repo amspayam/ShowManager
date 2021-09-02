@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="background">@color/windowsBackground</item>
+        <item name="textButton">@style/Widget.AppComponents.Button.Text</item>
+        <item name="outlineButton">@style/Widget.AppComponents.Button.Outline</item>
+        <item name="filledButton">@style/Widget.AppComponents.Button.Filled</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+</resources>
