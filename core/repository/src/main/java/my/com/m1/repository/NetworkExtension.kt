@@ -85,7 +85,7 @@ private suspend fun <T, R> Call<T>.enqueue(
  * @return the data layer error
  */
 
-private const val ERROR_MESSAGE = "خطا در برقراری ارتباط"
+private const val ERROR_MESSAGE = "Can Not Connect To Server"
 fun fromNetworkThrowable(throwable: Throwable): RestErrorResponse {
 
     throwable.printStackTrace()

@@ -1,44 +1,35 @@
 package com.combyne.showmanager.movies.presenter
 
 import androidx.lifecycle.MutableLiveData
+import androidx.paging.PagingData
 import com.combyne.showmanager.MoviesQuery
 import com.combyne.showmanager.movies.domain.MoviesUseCase
 import com.combyne.showmanager.movies.domain.model.MovieRequestModel
 import com.combyne.uikit.base.viewmodel.BaseViewModel
-import com.combyne.uikit.extension.mutablelivedata.notifyObserver
 import com.mobilityone.core.view.ViewState
+import kotlinx.coroutines.flow.Flow
 import my.com.m1.repository.executeUseCase
 
 class MoviesViewModel(
     var addShowUseCase: MoviesUseCase
 ) : BaseViewModel() {
 
-    val moviesViewStateLiveData = MutableLiveData<ViewState<List<MoviesQuery.Movie>?>>()
-    val movieItemsLiveData = MutableLiveData<MutableList<Any>>(mutableListOf())
+    val moviesViewStateLiveData = MutableLiveData<ViewState<Flow<PagingData<MoviesQuery.Movie>>>>()
 
     init {
-        getMovies(first = 20, skip = 0)
+        getMovies()
     }
 
-    fun getMovies(first: Int, skip: Int) {
+    fun getMovies() {
         moviesViewStateLiveData.value = ViewState.ViewLoading
         track {
-            addShowUseCase.executeAsync(MovieRequestModel(first = first, skip = skip))
+            addShowUseCase.executeAsync(Unit)
                 .executeUseCase({ movies ->
-                    movies?.let {
-                        prepareItemsForAdapter(it)
-                    }
                     moviesViewStateLiveData.value = ViewState.ViewData(movies)
                 }, {
                     moviesViewStateLiveData.value = ViewState.ViewError(it.error, it.status)
                 })
         }
-    }
-
-    private fun prepareItemsForAdapter(originalList: List<MoviesQuery.Movie>) {
-        movieItemsLiveData.value?.clear()
-        movieItemsLiveData.value?.addAll(originalList)
-        movieItemsLiveData.notifyObserver()
     }
 
 }

@@ -27,7 +27,7 @@ class MovieViewHolder(
         }
         binding.titleTextview.text = data.movie()?.title()
         binding.releaseDateTextview.text = date
-        binding.seasonsTextview.text = ": ${data.movie()?.seasons()}"
+        binding.seasonsTextview.text = ": ${data.movie()?.seasons()?.toInt()}"
     }
 
 }

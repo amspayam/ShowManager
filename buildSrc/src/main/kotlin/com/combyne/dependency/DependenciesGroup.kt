@@ -11,6 +11,7 @@ fun DependencyHandlerScope.androidXViewDG() {
         Libraries.androidx_cardView,
         Libraries.androidx_preferences,
         Libraries.androidx_appcompat,
+        Libraries.androidx_paging,
         Libraries.androidx_legacySupportV4,
         Libraries.androidx_constraintLayout
     )

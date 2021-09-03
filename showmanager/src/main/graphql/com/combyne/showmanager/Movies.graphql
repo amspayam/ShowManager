@@ -1,5 +1,10 @@
-query Movies($first: Int, $skip: Int) {
-    response: movies(first: $first, skip: $skip) {
+query Movies($after: String, $first: Int) {
+    response: movies(after: $after, first: $first) {
+        pageInfo {
+            hasNextPage
+            startCursor
+            endCursor
+        }
         movies: edges {
             movie: node {
                 id

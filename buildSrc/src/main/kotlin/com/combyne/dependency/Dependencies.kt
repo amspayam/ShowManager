@@ -9,42 +9,48 @@ object Versions {
     const val firebasePerformance = "1.3.1"
     // </editor-fold>
 
-    // <editor-fold desc="Google">
-
-    // Material
+    // <editor-fold desc="Material">
     const val material = "1.2.1"
+    // </editor-fold>
 
-    // Multidex
+    // <editor-fold desc="Multidex">
     const val androidx_multidex = "2.0.1"
+    // </editor-fold>
 
-    // Annotation
+    // <editor-fold desc="Annotation">
     const val androidx_annotation = "1.1.0"
+    // </editor-fold>
 
-    // KTX
+    // <editor-fold desc="KTX">
     const val androidx_core_ktx = "1.2.0"
+    // </editor-fold>
 
-    // Views
+    // <editor-fold desc="Views">
     const val androidx_recyclerview = "1.1.0"
     const val androidx_cardview = "1.0.0"
     const val androidx_appcompat = "1.2.0"
+    const val androidx_paging = "3.0.1"
     const val androidx_legacySupportV4 = "1.0.0"
     const val androidx_constraintLayout = "2.0.4"
+    // </editor-fold>
 
-    // Preferences
+    // <editor-fold desc="Preferences">
     const val androidx_preferences = "1.1.1"
+    // </editor-fold>
 
-    // Lifecycle
+    // <editor-fold desc="Lifecycle">
     const val androidx_lifecycle_viewmodel = "2.2.0"
     const val androidx_lifecycle_livedata = "2.2.0"
+    // </editor-fold>
 
-    // Biometric
+    // <editor-fold desc="Biometric">
     const val androidx_biometric = "1.0.1"
+    // </editor-fold>
 
-    // Navigation
+    // <editor-fold desc="Navigation">
     const val androidx_navigation_runtime = "2.3.5"
     const val androidx_navigation_fragment = "2.3.5"
     const val androidx_navigation_ui = "2.3.5"
-
     // </editor-fold>
 
     // <editor-fold desc="Play Service">
@@ -59,7 +65,7 @@ object Versions {
     const val apollo_android_support = "2.5.5"
     // </editor-fold>
 
-    // <editor-fold desc="Google map">
+    // <editor-fold desc="Google Map">
     const val googleMap = "17.0.0"
     //</editor-fold>
 
@@ -110,7 +116,6 @@ object Versions {
     const val logger = "2.2.0"
     // </editor-fold>
 
-
     // <editor-fold desc="Chuck">
     const val chuck = "1.1.0"
     // </editor-fold>
@@ -134,7 +139,6 @@ object Versions {
 object Libraries {
 
     // <editor-fold desc="Tools">
-
     const val tools_androidGradle = "com.android.tools.build:gradle:${Versions.androidGradle}"
     const val tools_googleServicesGradle =
         "com.google.gms:google-services:${Versions.googleServicesGradle}"
@@ -151,41 +155,47 @@ object Libraries {
     const val kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     // </editor-fold>
 
-    // <editor-fold desc="Google">
-
-    // Material
+    // <editor-fold desc="Material">
     const val material = "com.google.android.material:material:${Versions.material}"
+    // </editor-fold>
 
-    // MultiDex
+    // <editor-fold desc="MultiDex">
     const val androidx_multiDex = "androidx.multidex:multidex:${Versions.androidx_multidex}"
+    // </editor-fold>
 
-    // Annotation
+    // <editor-fold desc="Annotation">
     const val androidx_annotation = "androidx.annotation:annotation:${Versions.androidx_annotation}"
+    // </editor-fold>
 
-    // KTX
+    // <editor-fold desc="KTX">
     const val androidx_core_ktx = "androidx.core:core-ktx:${Versions.androidx_core_ktx}"
+    // </editor-fold>
 
-    // Views
+    // <editor-fold desc="Views">
     const val androidx_recyclerView =
         "androidx.recyclerview:recyclerview:${Versions.androidx_recyclerview}"
     const val androidx_cardView = "androidx.cardview:cardview:${Versions.androidx_cardview}"
     const val androidx_appcompat = "androidx.appcompat:appcompat:${Versions.androidx_appcompat}"
+    const val androidx_paging = "androidx.paging:paging-runtime:${Versions.androidx_paging}"
     const val androidx_legacySupportV4 =
         "androidx.legacy:legacy-support-v4:${Versions.androidx_legacySupportV4}"
     const val androidx_constraintLayout =
         "androidx.constraintlayout:constraintlayout:${Versions.androidx_constraintLayout}"
+    // </editor-fold>
 
-    //Preferences
+    // <editor-fold desc="Preferences">
     const val androidx_preferences =
         "androidx.preference:preference-ktx:${Versions.androidx_preferences}"
+    // </editor-fold>
 
-    // Lifecycle
+    // <editor-fold desc="Lifecycle">
     const val androidx_lifecycle_viewmodel =
         "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.androidx_lifecycle_viewmodel}"
     const val androidx_lifecycle_livedata =
         "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.androidx_lifecycle_livedata}"
+    // </editor-fold>
 
-    // Navigation
+    // <editor-fold desc="Navigation">
     const val androidx_navigation_runtime =
         "androidx.navigation:navigation-runtime-ktx:${Versions.androidx_navigation_runtime}"
     const val androidx_navigation_fragment =
@@ -195,11 +205,15 @@ object Libraries {
     // </editor-fold>
 
     // <editor-fold desc="Apollo">
-    const val tools_apollo_version = "com.apollographql.apollo:apollo-gradle-plugin:${Versions.apollo_runtime}"
+    const val tools_apollo_version =
+        "com.apollographql.apollo:apollo-gradle-plugin:${Versions.apollo_runtime}"
     const val apollo_runtime = "com.apollographql.apollo:apollo-runtime:${Versions.apollo_runtime}"
-    const val apollo_coroutines_support = "com.apollographql.apollo:apollo-coroutines-support:${Versions.apollo_coroutines_support}"
-    const val apollo_rx2_support = "com.apollographql.apollo:apollo-rx2-support:${Versions.apollo_rx2_support}"
-    const val apollo_android_support = "com.apollographql.apollo:apollo-android-support:${Versions.apollo_android_support}"
+    const val apollo_coroutines_support =
+        "com.apollographql.apollo:apollo-coroutines-support:${Versions.apollo_coroutines_support}"
+    const val apollo_rx2_support =
+        "com.apollographql.apollo:apollo-rx2-support:${Versions.apollo_rx2_support}"
+    const val apollo_android_support =
+        "com.apollographql.apollo:apollo-android-support:${Versions.apollo_android_support}"
     // </editor-fold>
 
     // <editor-fold desc="Google Map">

@@ -8,7 +8,7 @@ import org.koin.dsl.module
 
 val moviesDataModule = module {
 
-    factory<MoviesRepository> { MoviesRepositoryImpl(get()) }
-    factory<MoviesRemoteDataSource> { MoviesRemoteDataSourceImpl(get()) }
+    factory<MoviesRepository> { MoviesRepositoryImpl(dataSource = get()) }
+    factory<MoviesRemoteDataSource> { MoviesRemoteDataSourceImpl(apolloClient = get()) }
 
 }

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.combyne.showmanager.databinding.FragmentMoviesBinding
 import com.combyne.showmanager.movies.presenter.adapter.MovieAdapter
@@ -14,6 +15,8 @@ import com.combyne.uikit.base.viewmodel.MessageTypeEnum
 import com.mobilityone.core.view.onViewData
 import com.mobilityone.core.view.onViewError
 import com.mobilityone.core.view.onViewLoading
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MoviesFragment : BaseFragment<MoviesViewModel>() {
@@ -47,8 +50,13 @@ class MoviesFragment : BaseFragment<MoviesViewModel>() {
         // <editor-fold desc="Observe History">
         viewModel.moviesViewStateLiveData.observe(viewLifecycleOwner) {
             it.onViewLoading { binding.swipeRefresh.isRefreshing = true }
-                .onViewData {
-                    binding.swipeRefresh.isRefreshing = false
+                .onViewData { data ->
+                    viewLifecycleOwner.lifecycleScope.launch {
+                        data.collectLatest { list ->
+                            binding.swipeRefresh.isRefreshing = false
+                            movieAdapter.submitData(list)
+                        }
+                    }
                 }
                 .onViewError { messages, _ ->
                     showMessage(
@@ -62,21 +70,12 @@ class MoviesFragment : BaseFragment<MoviesViewModel>() {
         }
         // </editor-fold>
 
-        // <editor-fold desc="Observe Adapter">
-        viewModel.movieItemsLiveData.observe(viewLifecycleOwner) {
-            movieAdapter.setItems(it)
-        }
-        // </editor-fold>
     }
 
     override fun setupListener() {
         binding.swipeRefresh.setOnRefreshListener {
-            viewModel.getMovies(first = 20, skip = 0)
+            viewModel.getMovies()
         }
-    }
-
-    override fun onClick(v: View?) {
-        super.onClick(v)
     }
 
 }
