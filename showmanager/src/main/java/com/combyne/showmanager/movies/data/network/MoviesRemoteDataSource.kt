@@ -1,9 +1,9 @@
 package com.combyne.showmanager.movies.data.network
 
 import androidx.paging.PagingData
+import com.combyne.repository.ResultModel
 import com.combyne.showmanager.MoviesQuery
 import kotlinx.coroutines.flow.Flow
-import my.com.m1.repository.ResultModel
 
 
 interface MoviesRemoteDataSource {

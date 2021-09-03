@@ -8,9 +8,7 @@ dependencies {
     implementation(project(":core:uikit"))
     implementation(project(":core:cachemanager"))
     implementation(project(":core:repository"))
-    implementation(project(":core:account"))
     implementation(project(":core:navigation"))
-    implementation(project(":core:shared"))
 
 
     koinDG()

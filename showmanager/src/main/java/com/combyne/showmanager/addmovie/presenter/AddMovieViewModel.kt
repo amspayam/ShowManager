@@ -1,6 +1,8 @@
 package com.combyne.showmanager.addmovie.presenter
 
 import androidx.lifecycle.MutableLiveData
+import com.combyne.core.view.ViewState
+import com.combyne.repository.executeUseCase
 import com.combyne.showmanager.CreateMovieMutation
 import com.combyne.showmanager.R
 import com.combyne.showmanager.addmovie.domain.AddMovieUseCase
@@ -8,11 +10,9 @@ import com.combyne.showmanager.addmovie.domain.model.AddMovieRequestModel
 import com.combyne.uikit.base.viewmodel.BaseViewModel
 import com.combyne.uikit.base.viewmodel.MessageMaster
 import com.combyne.uikit.base.viewmodel.MessageTypeEnum
-import com.mobilityone.core.view.ViewState
-import my.com.m1.repository.executeUseCase
 
 class AddMovieViewModel(
-    var addShowUseCase: AddMovieUseCase
+    private var addShowUseCase: AddMovieUseCase
 ) : BaseViewModel() {
 
     val addShowViewStateLiveData = MutableLiveData<ViewState<CreateMovieMutation.Movie?>>()

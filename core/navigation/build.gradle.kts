@@ -5,9 +5,6 @@ plugins {
 
 dependencies {
 
-    // Features
-//    api(project(":authentication"))
-
     navigationDG()
     baseModuleDG()
 

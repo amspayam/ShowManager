@@ -3,12 +3,10 @@ rootProject.name = "ShowManager"
 include 'app'
 include ':core:base'
 include ':core:uikit'
-include ':core:shared'
 include ':core:repository'
 include ':core:cachemanager'
 include ':core:navigation'
 
 /*Feature*/
 include ':main'
-include ':core:account'
 include ':showmanager'

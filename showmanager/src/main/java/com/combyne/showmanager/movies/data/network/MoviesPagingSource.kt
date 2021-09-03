@@ -4,8 +4,8 @@ import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.apollographql.apollo.api.Input
 import com.apollographql.apollo.coroutines.await
+import com.combyne.repository.network.NetworkManager
 import com.combyne.showmanager.MoviesQuery
-import my.com.m1.repository.network.NetworkManager
 import retrofit2.HttpException
 import java.io.IOException
 

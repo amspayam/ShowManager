@@ -9,6 +9,7 @@ object Variable {
     const val boolean = "boolean"
 }
 
+@Suppress("UnstableApiUsage")
 fun ProductFlavor.addConfigField(key: String, value: Any) {
     this.buildConfigField(getTypeString(value), key, value.toString())
 }

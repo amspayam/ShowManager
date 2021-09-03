@@ -10,6 +10,12 @@
         <entry key="core/uikit/src/main/res/drawable/ic_box.xml" value="0.43072916666666666" />
         <entry key="core/uikit/src/main/res/drawable/ic_calendar_today.xml" value="0.43072916666666666" />
         <entry key="core/uikit/src/main/res/drawable/ic_close.xml" value="0.43072916666666666" />
+        <entry key="core/uikit/src/main/res/drawable/ic_copy.xml" value="0.37395833333333334" />
+        <entry key="core/uikit/src/main/res/drawable/ic_search.xml" value="0.37395833333333334" />
+        <entry key="core/uikit/src/main/res/drawable/ic_support.xml" value="0.37395833333333334" />
+        <entry key="core/uikit/src/main/res/drawable/ic_user.xml" value="0.37395833333333334" />
+        <entry key="core/uikit/src/main/res/drawable/shape_rect_white_16dp.xml" value="0.37395833333333334" />
+        <entry key="core/uikit/src/main/res/drawable/shape_rect_white_24dp.xml" value="0.21614583333333334" />
         <entry key="core/uikit/src/main/res/layout/component_toolbar.xml" value="0.41458333333333336" />
         <entry key="showmanager/src/main/res/layout/fragment_add_show.xml" value="0.41458333333333336" />
         <entry key="showmanager/src/main/res/layout/fragment_movies.xml" value="0.42256410256410254" />

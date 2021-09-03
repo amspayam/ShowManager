@@ -38,11 +38,6 @@ abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity(),
     override fun onClick(v: View?) {
     }
 
-    protected fun onClickListeners(vararg views: View) {
-        for (view in views)
-            view.setOnClickListener(this)
-    }
-
     open fun showMessage(message: MessageMaster) {
         message.text = message.message ?: message.messageResourceId?.let {
             getString(it)

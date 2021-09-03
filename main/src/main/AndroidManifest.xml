@@ -2,9 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="my.com.m1.onegold.main">
 
-    <application
-        android:allowBackup="true"
-        android:supportsRtl="true">
+    <application>
         <activity android:name="com.combyne.main.mainactivity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -2,16 +2,15 @@ package com.combyne.showmanager.movies.presenter
 
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.PagingData
+import com.combyne.core.view.ViewState
+import com.combyne.repository.executeUseCase
 import com.combyne.showmanager.MoviesQuery
 import com.combyne.showmanager.movies.domain.MoviesUseCase
-import com.combyne.showmanager.movies.domain.model.MovieRequestModel
 import com.combyne.uikit.base.viewmodel.BaseViewModel
-import com.mobilityone.core.view.ViewState
 import kotlinx.coroutines.flow.Flow
-import my.com.m1.repository.executeUseCase
 
 class MoviesViewModel(
-    var addShowUseCase: MoviesUseCase
+    private var addShowUseCase: MoviesUseCase
 ) : BaseViewModel() {
 
     val moviesViewStateLiveData = MutableLiveData<ViewState<Flow<PagingData<MoviesQuery.Movie>>>>()

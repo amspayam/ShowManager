@@ -5,14 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.combyne.core.view.onViewData
+import com.combyne.core.view.onViewError
+import com.combyne.core.view.onViewLoading
 import com.combyne.showmanager.R
 import com.combyne.showmanager.databinding.FragmentAddMovieBinding
 import com.combyne.uikit.base.BaseFragment
 import com.combyne.uikit.base.viewmodel.MessageMaster
 import com.combyne.uikit.base.viewmodel.MessageTypeEnum
-import com.mobilityone.core.view.onViewData
-import com.mobilityone.core.view.onViewError
-import com.mobilityone.core.view.onViewLoading
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class AddMovieFragment : BaseFragment<AddMovieViewModel>() {

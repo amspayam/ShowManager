@@ -15,7 +15,6 @@
             <flag name="search" value="3" />
             <flag name="phone" value="4" />
             <flag name="copy" value="5" />
-            <flag name="gold" value="6" />
         </attr>
     </declare-styleable>
 </resources>

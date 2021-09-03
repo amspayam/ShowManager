@@ -18,7 +18,6 @@ import androidx.core.content.ContextCompat
 import com.combyne.uikit.R
 import com.combyne.uikit.components.edittext.utils.CurrencyWatcherUtils
 import com.combyne.uikit.components.edittext.utils.CurrencyWatcherUtils.Companion.MALAYSIA_CURRENCY
-import com.combyne.uikit.components.edittext.utils.DecimalDigitsInputFilter
 import com.combyne.uikit.components.edittext.utils.PrefixWatcherUtils
 import com.combyne.uikit.components.snackbar.SnackBarComponent
 import com.combyne.uikit.components.snackbar.StateEnums
@@ -42,7 +41,6 @@ class EditTextComponent @JvmOverloads constructor(
         const val SEARCH = 3
         const val PHONE = 4
         const val COPY = 5
-        const val GOLD = 6
     }
 
     private var binding: ComponentEditTextBinding =
@@ -198,24 +196,6 @@ class EditTextComponent @JvmOverloads constructor(
                     }
                     clipboard.setPrimaryClip(ClipData.newPlainText("Data", text))
                 }
-            }
-            GOLD -> {
-                binding.editText.inputType =
-                    InputType.TYPE_CLASS_NUMBER + InputType.TYPE_NUMBER_FLAG_DECIMAL
-                val drawable = ContextCompat.getDrawable(context, R.drawable.ic_grams)
-                binding.editText.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                    binding.editText.compoundDrawablesRelative[0],
-                    binding.editText.compoundDrawablesRelative[1],
-                    drawable,
-                    binding.editText.compoundDrawablesRelative[3]
-                )
-                binding.editText.filters = arrayOf<InputFilter>(
-                    DecimalDigitsInputFilter(
-                        digitsBeforeZero = 5,
-                        digitsAfterZero = 3
-                    )
-                )
-                text = "0"
             }
             else -> initEditText()
         }

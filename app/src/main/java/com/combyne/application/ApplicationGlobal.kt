@@ -1,14 +1,12 @@
 package com.combyne.application
 
 import androidx.multidex.MultiDexApplication
-import com.combyne.cachemanager.cache.di.CachemanagerInjector
+import com.combyne.cache.di.CachemanagerInjector
 import com.combyne.main.mainactivity.di.MainActivityInjector
+import com.combyne.repository.di.RepositoryInjector
 import com.combyne.showmanager.addmovie.di.AddMovieInjector
 import com.combyne.showmanager.movies.di.MoviesInjector
 import com.combyne.showmanager.shows.di.ShowsInjector
-import my.com.m1.onegold.account.di.AccountManagerInjector
-import my.com.m1.onegold.shared.di.ApplicationSharedInjector
-import my.com.m1.repository.di.RepositoryInjector
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -29,8 +27,6 @@ class ApplicationGlobal : MultiDexApplication() {
             androidLogger(Level.ERROR).androidContext(this@ApplicationGlobal)
                 .modules(CachemanagerInjector.provideDependencies())
                 .modules(RepositoryInjector.provideDependencies())
-                .modules(AccountManagerInjector.provideDependencies())
-                .modules(ApplicationSharedInjector.provideDependencies())
                 .modules(MainActivityInjector.provideDependencies())
                 /*Show Manager*/
                 .modules(ShowsInjector.provideDependencies())

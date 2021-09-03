@@ -242,13 +242,13 @@ object Libraries {
         "org.koin:koin-android-architecture:${Versions.koin_android_architecture}"
 
 
-//    const val koin_core =  "io.insert-koin:koin-core:${Versions.koin_android}"
-//    const val koin_test =  "io.insert-koin:koin-test:${Versions.koin_android}"
+//    const val koin_core =  "io.insert-koin:koin-core:${com.combyne.dependency.Versions.koin_android}"
+//    const val koin_test =  "io.insert-koin:koin-test:${com.combyne.dependency.Versions.koin_android}"
 //
-//    const val koin_android = "io.insert-koin:koin-android:${Versions.koin_android}"
-//    const val koin_android_compat = "io.insert-koin:koin-android-compat:${Versions.koin_android}"
-//    const val koin_androidx_workmanager = "io.insert-koin:koin-androidx-workmanager:${Versions.koin_android}"
-//    const val koin_androidx_compose = "io.insert-koin:koin-androidx-compose:${Versions.koin_android}"
+//    const val koin_android = "io.insert-koin:koin-android:${com.combyne.dependency.Versions.koin_android}"
+//    const val koin_android_compat = "io.insert-koin:koin-android-compat:${com.combyne.dependency.Versions.koin_android}"
+//    const val koin_androidx_workmanager = "io.insert-koin:koin-androidx-workmanager:${com.combyne.dependency.Versions.koin_android}"
+//    const val koin_androidx_compose = "io.insert-koin:koin-androidx-compose:${com.combyne.dependency.Versions.koin_android}"
 
 
     // </editor-fold>
