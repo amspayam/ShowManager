@@ -19,15 +19,6 @@ class MoviesUseCase(
 ) : AsyncSuspendUseCase<Unit, ResultModel<Flow<PagingData<MoviesQuery.Movie>>>> {
 
     override suspend fun executeAsync(rq: Unit): ResultModel<Flow<PagingData<MoviesQuery.Movie>>> {
-//        val result = repository.getMovies().map { isSuccess ->
-//            var list = PagingData.empty<MoviesQuery.Movie>()
-//            GlobalScope.launch(Dispatchers.IO) {
-//                isSuccess.collectLatest {
-//                    list = it
-//                }
-//            }
-//            return@map list
-//        }
         return repository.getMovies()
     }
 }
